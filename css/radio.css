@@ -1,0 +1,79 @@
+  .radio-on{
+   width:20px;height:20px;  
+   border-radius:50px;
+   border:solid #009688 1px;
+   
+  
+}
+ .radio-on div{
+      width:10px;height:10px;border-radius:50px;
+	  margin-top: 4px;
+      left: 4px;
+	  position:relative;
+	 
+	  animation: radio-fade-in 0.5s;
+   -moz-animation: radio-fade-in 1s;	/* Firefox */
+   -webkit-animation: radio-fade-in 1s;	/* Safari 和 Chrome */
+   -o-animation: radio-fade-in 1s;	/* Opera */
+   }
+ .radio-off{
+   width:20px;height:20px;border-radius:50px;border:solid #b3afaf57 1px;
+ }
+.radio-off div{
+     width:12px;height:12px;background:#bebebe;border-radius:50px;
+	 margin-top: 4px;
+     margin-left: 4px;
+   }
+   
+@keyframes radio-fade-in {
+	
+	 0% {opacity: 0.5;}
+    40% {opacity: 0.6;}
+	60% {opacity: 0.8;}
+    100% {opacity: 1;} 
+}
+  .radio-teal{ 
+    background: #009688;
+    border-color:#009688;
+	border:solid #009688 1px;
+   }
+   .radio-pink{
+     background: #e91e63;
+    border-color:#e91e63;
+	border:solid #e91e63 1px;
+   }
+   .radio-cyan{
+   background: #00bcd4;
+    border-color:#00bcd4;
+	border:solid #00bcd4 1px;
+   }
+   
+   .radio-yellow{
+    background: #ffcc23;
+    border-color:#ffcc23;
+	border:solid #ffcc23 1px;
+   }
+   .radio-purple{
+    background: #9c27b0;
+    border-color:#9c27b0;
+	border:solid #9c27b0 1px;
+   }
+
+   .radio-teal-on{ 
+	border: solid #009688 1px;
+   }
+   .radio-pink-on{
+	border: solid #e91e63 1px;
+   
+   }
+   .radio-cyan-on{
+	border: solid #00bcd4 1px;
+   
+   }
+   .radio-yellow-on{
+	border: solid #ffcc23 1px;
+   }
+   .radio-purple-on{
+	border: solid #9c27b0 1px;
+    
+   }

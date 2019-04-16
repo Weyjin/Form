@@ -1,0 +1,107 @@
+ .checkbox-on{
+      width:17px;
+	  height:17px;	  
+   }
+   .checkbox-on:after{
+      width:8px;
+	  height:12px;
+	  border:solid #fff 3px;
+	  border-left:none;
+	  border-top:none;
+	  transform:rotate(36deg);
+	  left:3px;
+	  top:0px;
+	  
+	  position:relative;
+	  display: block; content: "";clear: both;
+   }
+   .checkbox-off{
+      width:17px;
+	  height:17px;
+	  border:solid #b3afaf57 3px;
+	  
+   }
+   .checkbox-off:after{
+      width:8px;
+	  height:12px;
+	  border:solid #b3afaf57 3px;
+	  border-left:none;
+	  border-top:none;
+	  transform:rotate(36deg);
+	  left:3px;
+	  top:0px;
+	  position:relative;
+	  display: block; content: "";clear: both;
+   }
+
+   .checkbox-teal{
+     border: solid #009688 3px;
+     background: #009688;
+	 animation: halo  1.3s ease-in-out;
+   }
+    .checkbox-teal:after{  
+	    border: solid #fff 3px;
+		border-left: none;
+		border-top: none;
+   }
+   .checkbox-cyan:after{
+    border: solid #fff 3px;
+		border-left: none;
+		border-top: none;
+   }
+   .checkbox-cyan{
+    border: solid #00bcd4 3px;
+    background: #00bcd4;
+	animation: halo  1.3s ease-in-out;
+   }
+   .checkbox-cyan:after{
+        border: solid #fff 3px;
+		border-left: none;
+		border-top: none;
+	}
+   .checkbox-pink{
+    border: solid #e91e63 3px;
+    background: #e91e63;
+	animation: halo  1.3s ease-in-out;
+   }
+   .checkbox-pink:after{
+        border: solid #fff 3px;
+		border-left: none;
+		border-top: none;
+   }
+   .checkbox-yellow{
+    border: solid #ffcc23 3px;
+    background: #ffcc23;
+	animation: halo  1.3s ease-in-out;
+   }
+    .checkbox-yellow:after{
+		border: solid #fff 3px;
+		border-left: none;
+		border-top: none;
+   }
+   .checkbox-purple{
+    border: solid #9c27b0 3px;
+    background: #9c27b0;
+	animation: halo  1.3s ease-in-out;
+   }
+   .checkbox-purple:after{
+        border: solid #fff 3px;
+		border-left: none;
+		border-top: none;
+   }
+
+   @keyframes halo{
+	50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+		-moz-transform:scale(1.1);
+		-o-transform: scale(1.1);
+		opacity: 0.5;
+    } 100% {
+	      transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+		  -moz-animation:scale(1.1);
+		  -o-transform: scale(1.1);
+          opacity: 1;   
+      }
+	}

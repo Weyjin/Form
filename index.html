@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>表单控件</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.Switch.js"></script>
+<script src="js/map.js"></script>
+<script src="js/jquery.Radio.js"></script>
+<script src="js/jquery.Checkbox.js"></script>
+
+<link href="css/switch.css" rel="stylesheet"/>
+<link href="css/radio.css" rel="stylesheet"/>
+<link href="css/checkbox.css" rel="stylesheet"/>
+<style>
+   ul{
+     list-style: none;
+   }
+   li{
+     display: inline;
+	 float:left;width:75px;
+   }
+   li div{
+     display: inline;float:left;
+	 
+   }
+   label{
+   float:left; display: inline;margin-left: 7px;
+   }
+   ul.option li{
+     display: inline;
+	 float:left;width:95px;
+   }
+</style>
+</head>
+ <body>
+<div style="margin:100px 100px;">
+<ul class="option">
+    <li><input type="checkbox" id="chbox1" checked/><label>开灯</label></li>
+	<li><input type="checkbox" id="chbox2" /><label>开黑</label></li>
+	<li><input type="checkbox" id="chbox3" checked /><label>开门</label></li>
+	<li><input type="checkbox" id="chbox4" disabled checked/><label>开窗</label></li>
+	<li><input type="checkbox" id="chbox5" checked/><label>开开</label></li>
+</ul>
+<br/>
+<ul class="option">
+	<li><input type="radio" id="sex1" name="sex" checked disabled/><label>男</label></li>
+	<li><input type="radio" id="sex2" name="sex" />女</li>    
+</ul>
+
+	<br/>
+<ul class="option">
+	<li><input type="radio" id="radio1" name="radio" value="选项一"/><label>选项一</label></li>
+	<li><input type="radio" id="radio2" name="radio"  value="选项二" disabled /><label>选项二</label></li>  
+	<li><input type="radio" id="radio3" name="radio"  value="选项三" checked/><label>选项三</label></li>
+	<li><input type="radio" id="radio4" name="radio"  value="选项四" /><label>选项四</label></li>
+	<li><input type="radio" id="radio5" name="radio"  value="选项五" /><label>选项五</label></li>
+ </ul>
+   <br/>
+
+<ul class="option">
+   <li><input type="checkbox" id="box1" name="checkbox" checked/><label>苹果</label></li>
+   <li><input type="checkbox" id="box2" name="checkbox" disabled/><label>雪梨</label></li>
+   <li><input type="checkbox" id="box3" name="checkbox" /><label>香蕉</label></li>
+   <li><input type="checkbox" id="box4" name="checkbox" disabled checked/><label>柿子</label></li>
+   <li><input type="checkbox" id="box5" name="checkbox" /><label>桃</label></li>
+</ul>
+   
+</div>
+<script>
+  
+ $(function(){
+      
+      $("#chbox1").Switch({defaultStyle:'switch-purple'});
+      $("#chbox2").Switch({});
+      $("#chbox3").Switch({defaultStyle:'switch-teal',result:function(bool){
+	      if(bool){
+		     console.log('打开');
+		  }else{
+		     console.log('关闭');
+		  }
+	  }});
+    $("#chbox4").Switch({defaultStyle:'switch-pink'});
+	$("#chbox5").Switch({defaultStyle:'switch-cyan'});
+
+    $("#sex1").Radio({});
+	$("#sex2").Radio({});
+
+    $("#radio1").Radio({defaultStyle:'radio-teal'});
+    $("#radio2").Radio({});
+	$("#radio3").Radio({defaultStyle:'radio-purple'});
+	$("#radio4").Radio({defaultStyle:'radio-pink'});
+	$("#radio5").Radio({defaultStyle:'radio-cyan'});
+
+    $("#box1").Checkbox({defaultStyle:'checkbox-pink'});
+    $("#box2").Checkbox({});
+	$("#box3").Checkbox({defaultStyle:'checkbox-teal'});
+	$("#box4").Checkbox({defaultStyle:'checkbox-cyan'});
+	$("#box5").Checkbox({defaultStyle:'checkbox-purple'});
+
+ });
+</script>
+</body>
+</html>

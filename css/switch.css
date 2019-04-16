@@ -1,0 +1,49 @@
+ .switch-on{
+   width:36px;height:20px;  
+   border-radius:50px;     
+   }
+
+   .switch-off{
+     width:36px;height:20px;border-radius:50px;border:solid #b3afaf57 1px;
+     
+   }
+ 
+ .switch-on div{
+        width:16px;height:16px;background:#fff;border-radius:50px;margin-top:2px;
+		left:18px;
+		position:relative;
+   }
+   .switch-off div{
+     width:16px;height:16px;background:#eee;border-radius:50px;margin-top:2px;margin-left:2px;
+   }
+   .switch-teal{
+    background:#009688;  
+    border:solid #009688 1px;
+   }
+   .switch-pink{
+    background:#e91e63;  
+    border:solid #e91e63 1px;
+   }
+   .switch-cyan{
+    background:#00bcd4;  
+    border:solid #00bcd4 1px;
+   }
+   .switch-yellow{
+    background:#ffcc23;  
+    border:solid #ffcc23 1px;
+   }
+   .switch-purple{
+    background:#9c27b0;  
+    border:solid #9c27b0 1px;
+   }
+.animation-on{
+  animation: animation-on 1s;
+  -moz-animation: animation-on 1s;	/* Firefox */
+  -webkit-animation: animation-on 1s;	/* Safari 和 Chrome */
+  -o-animation: animation-on 1s;	/* Opera */
+}
+
+@keyframes animation-on{
+from {margin-left: 2px;}
+     to {margin-left: 18px;}
+}
