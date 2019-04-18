@@ -1,0 +1,75 @@
+ .arrow {   
+    position: absolute;  
+    width: 0px;  
+    height: 0px;  
+    line-height: 0px;
+    overflow:auto;
+    border-left: 10px solid #ffffff00;  
+    border-right: 10px solid #ffffff00; 
+	border-top: 10px solid #c7c7bef5; 
+    left: 45px;
+    bottom: -10px;s
+}  
+.tip {  
+    border-radius:8px;  
+    -moz-border-radius:8px;
+	-ms-border-radius:8px;
+	-o-border-radius:8px;
+	-webkit-border-radius:8px;  
+    position: absolute;  
+    width: 100px;
+    background: #fff;        
+    top: 0px;
+	left:0px;
+	
+	z-index:9999;
+	margin-right:10px;	 
+    box-shadow: darkgrey 1px 1px 3px 2px ;
+	padding:2px 2px;
+}  
+.tip div.title{
+  font-weight:bold;
+  margin-bottom:2px;
+  word-break:break-all;
+}
+.tip div.content{
+   font-size:12px;
+   overflow:auto;
+   margin-bottom:5px;
+   word-break:break-all;
+}
+ .tip-yellow{
+     background:#ffcc12;
+	 color:#fff;
+  }
+  .tip-yellow .arrow{
+	border-top: 10px solid #ffcc12;
+  }
+  .tip-teal{
+     background:#009688;
+	 color:#fff;
+  }
+  .tip-teal .arrow{
+     border-top: 10px solid #009688;
+  }
+  .tip-pink{
+     background:#e91e63;
+	 color:#fff;
+  }
+  .tip-pink .arrow{
+    border-top: 10px solid #e91e63;
+  }
+  .tip-purple{
+     background:#9c27b0;
+	 color:#fff;
+  }
+  .tip-purple .arrow{
+     border-top: 10px solid #9c27b0;
+  }
+  .tip-cyan{
+     background:#00bcd4;
+	 color:#fff;
+  }
+ .tip-cyan .arrow{
+     border-top: 10px solid #00bcd4;
+  }

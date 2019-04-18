@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>tips</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.tips.js"></script>
+<link href="css/tips.css" rel="stylesheet"/>
+
+<style>
+  button{
+	  margin: 0;
+	  padding: 5px;
+	  border: 1px solid transparent;  //自定义边框
+	  outline: none;    //消除默认点击蓝色边框效果
+  }
+</style>
+</head>
+ <body>
+<div style="margin:200px 100px;">
+
+<button id="btn1">默认</button>
+<button id="btn2" class="tip-yellow">YELLOW</button>
+<button id="btn3" class="tip-teal">TEAL</button>
+<button id="btn4" class="tip-pink">PINK</button>
+<button id="btn5" class="tip-purple">PURPLE</button>
+<button id="btn6" class="tip-cyan">CYAN</button>
+
+</div>
+<script>
+  
+ $(function(){
+ 
+    /**
+	 * tip默认出现在元素上方的中间，
+	 * 所以所选的元素最好指定width,
+	 * 而不是默认撑满屏幕
+	 */
+
+	$('#btn1').Tips({title:'默认',content:'这是默认的tip样式'});
+
+    $('#btn2').Tips({title:'YELLOW',content:'这是YELLOW样式',defaultStyle:'tip-yellow'});
+
+	$('#btn3').Tips({title:'TEAL',content:'这是TEAL样式<button>TEAL</button>',defaultStyle:'tip-teal',html:false});
+
+	$('#btn4').Tips({title:'PINK',content:'这是PINK样式。<button>PINK</button>',defaultStyle:'tip-pink'});
+
+	$('#btn5').Tips({title:'PURPLE',content:'这是PURPLE样式.水水水水水水水水水水水水水水',defaultStyle:'tip-purple'});
+
+    $('#btn6').Tips({title:'CYAN',content:'这是CYAN样式',defaultStyle:'tip-cyan'});
+ });
+</script>
+</body>
+</html>

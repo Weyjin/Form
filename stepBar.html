@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>step</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.stepBar.js"></script>
+<link href="css/stepBar.css" rel="stylesheet"/>
+<script src="js/jquery.tips.js"></script>
+<link href="css/tips.css" rel="stylesheet"/>
+
+</head>
+ <body>
+<div style="margin:200px 100px;">
+
+<div id="step"></div>
+<button id="btn1">上一步</button>
+<button id="btn2">下一步</button>
+<button id="btn3">到第二步</button>
+<button id="btn4">当前</button>
+
+<div id="step2"></div>
+
+</div>
+
+<script>
+  
+ $(function(){
+    
+   /**
+    * 提示：step依赖tip插件
+    */
+   var options={data:[{title:'开始',content:'当前步骤为开始'},
+                      {title:'审核',content:'当前步骤为审核'},
+                      {title:'执行',content:'当前步骤为执行'},
+					  {title:'结束',content:'当前步骤为结束'}],
+					  textPosition:'top',
+					 
+					  nodeClick:false,
+					  tips:{defaultStyle:'tip-cyan'},
+					  result:function(step,title){
+					      console.log('第'+step+'步 '+title);
+					  }};
+   var step=$("#step").StepBar(options);
+
+   $("#btn1").click(function(){
+       step.prevStep();
+   });
+   $("#btn2").click(function(){
+       step.nextStep();
+   });
+   $("#btn3").click(function(){
+       step.setStep(2);
+   });
+   $("#btn4").click(function(){
+       alert(step.getCurrentStep());
+   });
+
+
+  var options1={data:[{title:'开始',content:'当前步骤为开始'},
+                      {title:'提交申请',content:'当前步骤为提交申请'},
+                      {title:'部门审核',content:'当前步骤为部门审核'},
+					  {title:'行政部审批',content:'当前步骤为行政部审批'},
+					  {title:'总经理审批',content:'当前步骤为总经理审批'},
+					  {title:'批准',content:'当前步骤为批准'},
+					  {title:'结束',content:'当前步骤为结束'}],
+					  textPosition:'bottom',
+					  nodeClick:true,
+					  defaultStep:3,
+					  defaultStyle:'step-teal',
+					  result:function(step,title){
+					      console.log('第'+step+'步 '+title);
+					  }};
+   $("#step2").StepBar(options1);
+
+ });
+</script>
+</body>
+</html>

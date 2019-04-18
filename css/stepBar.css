@@ -1,0 +1,138 @@
+.step-container{
+      position: relative;
+	  width:525px;
+   }
+   .step-container ul{
+     list-style: none;
+	 overflow:auto;
+	 padding-inline-start: 0px;
+	  overflow-y:auto;
+	  z-index:0;
+   }
+   .step-container ul li{
+     display: inline;
+	 float:left;width:75px;
+	 
+   }
+  
+   .step-container ul li div.circular{
+      border-radius:50%;
+	  width:30px;
+	  height:30px;
+	  background:#e0e0e0;
+	  text-align:center;
+	  line-height:30px;
+	  z-index:2;
+	  margin:auto;
+   }
+    .step-container ul li:first-child div.circular{
+      float:left; 
+      
+   }
+   .step-container ul li:last-child div.circular{
+      float:right; 
+      
+   }
+  
+   .step-container .line{
+      height:5px;
+	  background:#e0e0e0;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  right: 0; 
+	  margin: auto;
+	  z-index:3;
+	  border:solid #e0e0e0 4px;
+	  border-left:none;
+	  border-right:none;
+	  margin-left:5px;
+	  margin-right:5px;
+   }
+
+  
+   .progress{
+      width:0%;
+	  height:100%;
+      background:#ffcc12;
+   }
+   .inner-circle{
+      background:#e0e0e0;
+	  border-radius:50%;
+	  width:20px;
+	  height:20px;
+	  margin:auto;
+	  top: 5px;
+	  left: 0;
+	  bottom: 0;
+	  right: 0; 
+	  position:relative;
+	  text-align:center;
+	  line-height:20px;
+	  z-index:4;
+	  color:#fff;
+   }
+
+   .msg{
+      height:16px;
+	  width:100%;
+	  position: absolute;	 
+	  left: 0;
+	  bottom: -16px;
+	  z-index:-1;
+   }
+   .msg-position{
+      bottom:32px;
+   }
+   .msg-flex{
+      display: -webkit-flex; /* Safari */
+	  display: flex;
+	  flex-direction:row;
+	  justify-content:center;
+   }
+   .msg-flex span{
+   width:75px;
+   font-size:12px;
+   text-align:center;
+  }
+  .msg-flex span:first-child{
+    text-align:left;
+  }
+   .msg-flex span:last-child{
+   text-align:right;
+  }
+  .default-color{
+    color:#e0e0e0;
+  }
+  .step-yellow{
+     background:#ffcc12;
+  }
+  .step-teal{
+     background:#009688;
+  }
+  .step-pink{
+     background:#e91e63;
+  }
+  .step-purple{
+     background:#9c27b0;
+  }
+  .step-cyan{
+     background:#00bcd4;
+  }
+
+  .step-yellow-color{
+     color:#ffcc12;
+  }
+  .step-teal-color{
+     color:#009688;
+  }
+  .step-pink-color{
+     color:#e91e63;
+  }
+  .step-purple-color{
+     color:#9c27b0;
+  }
+  .step-cyan-color{
+     color:#00bcd4;
+  }
