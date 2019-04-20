@@ -1,0 +1,44 @@
+.select{
+	 position:absolute;
+	 border:solid #eee 2px;
+	 border-radius:0px 0px 5px 5px;
+	 z-index:999;
+	 display:none;
+	 background:#fff;
+  }
+  .select div.option{
+     padding:2px 2px;
+	 
+  }
+  
+  .select div.option:hover{
+     background:#eee;	 
+	 cursor:pointer;
+	 
+  }
+
+  .select div.select-cyan:hover{
+     color:#fff;
+	 background:#00bcd4;
+	 font-weight:bold;
+  }
+  .select div.select-yellow:hover{
+      color:#fff;
+	  background:#ffcc12;
+	  font-weight:bold;
+  }
+  .select div.select-teal:hover{
+      color:#fff;
+	  background:#009688;
+	  font-weight:bold;
+  }
+  .select div.select-pink:hover{
+      color:#fff;
+	  background:#e91e63;
+	  font-weight:bold;
+  }
+  .select div.select-purple:hover{
+      color:#fff;
+	  background:#9c27b0;
+	  font-weight:bold;
+  }

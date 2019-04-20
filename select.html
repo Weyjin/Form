@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>select</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.select.js"></script>
+<link href="css/select.css" rel="stylesheet"/>
+
+<style>
+  button{
+	  margin: 0;
+	  padding: 5px;
+	  border: 1px solid transparent;  //自定义边框
+	  outline: none;    //消除默认点击蓝色边框效果
+  }
+</style>
+</head>
+ <body>
+<div style="margin:200px 100px;">
+<input type="text" id="input1" value="Java" submitvalue='Java1'/><br/><br/>
+<button id="btn1">获取value</button>
+<button id="btn2">获取submitvalue</button>
+<input type="text" id="input2" submitvalue/>
+
+</div>
+<script>
+  
+ $(function(){
+
+    var options={data:[{text:'默认',value:'默认1'},{text:'Android',value:'Android1'},
+	                   {text:'Java',value:'Java1'},
+					   {text:'PHP',value:'PHP1'},
+					   {text:'C#',value:'C#1'},
+					   {text:'C++',value:'C++1'}],
+					   defaultStyle:'select-yellow',
+					   enterEvent:function(value,submitvalue){
+					       console.log(value+"  "+submitvalue);
+					   },
+					   result:function(index,text,value){
+					      console.log('当前点击了'+index+' text:'+text+' 值:'+value);
+					   }};
+
+   var options2={data:[{text:'选项一',value:'选项一'},
+					   {text:'选项二',value:'选项二'},
+					   {text:'选项三',value:'选项三'},
+					   {text:'选项四',value:'选项四'},
+					   {text:'选项五',value:'选项五'}],
+					   editable:true};
+    var i=$('#input1').Select(options);
+	
+	$('#input2').Select(options2);
+
+	$('#btn1').click(function(){
+	    var value=i.val();
+		alert(value);
+	});
+	$('#btn2').click(function(){
+	    var value=i.submitValue();
+		alert(value);
+	});
+
+ });
+</script>
+</body>
+</html>
