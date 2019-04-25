@@ -30,7 +30,7 @@
 		
 	    init:function(){
 		  
-		  $(this.$element).after(this._create());
+		  $(document.body).append(this._create());
 		  this.options.defaultValue=$(this.$element).val();
 		  this.options.submitvalue=$(this.$element).attr('submitvalue');
 		  this.bindEvent();
