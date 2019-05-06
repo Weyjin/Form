@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.barrage.js"></script>
+<link rel="stylesheet" href="css/barrage.css"/>
+<script src="js/jquery.Switch.js"></script>
+<link href="css/switch.css" rel="stylesheet"/>
+<title>弹幕</title>
+<style>
+.barrage-target{
+    width:1200px;
+	height:500px;
+	margin-left:200px;
+	background:#000000;
+	border:solid #000000 2px;
+	z-index:1;
+}
+div.container{
+  margin-top:5px;
+  margin-left:200px;
+}
+
+</style>
+</head>
+ 
+<body>
+
+<div class="barrage-target"></div>
+<div class="container">
+<input type="checkbox" id="chbox1" checked/>
+
+</div>
+<script>
+$(function(){
+		 
+		  var options={data:getData()};
+		  var barrage=$(".barrage-target").barrage(options);
+		  
+		  $("#chbox1").Switch({defaultStyle:'switch-cyan',result:function(bool){
+			  if(bool){
+				 barrage.start();
+			  }else{
+				 barrage.stop();
+			  }
+	  }});
+		  
+		  function getData(){
+		        var data=[];
+				data[0]='弹幕来袭...';
+				data[1]='我从未见过如此厚颜无耻之人';
+				data[2]='666';
+				data[3]='空降部队'; 
+				data[4]='空降部队2222';
+				data[5]='这个笑容由我来守护';
+				data[6]='承包XXX/第一次给了XXX'; 
+				data[7]='火钳刘明'; 
+				data[8]='护眼小分队—— 核心价值观'; 
+				data[9]='前方xx福利'; 
+				data[10]='前方高能预警/反应，非战斗人员请立即撤离';
+				data[11]='看进度条'; 
+				data[12]='沙发';
+				data[13]='第一第一';
+				data[14]='借一部说话';
+				data[15]='我方了';
+				data[16]='诸葛村夫';
+				data[17]='233333333';
+				data[18]='xxx有问题';
+				data[19]='前方高能'; 
+				data[20]='我要选李白';
+				data[21]='真香';
+				data[22]='哈哈哈哈哈';
+				data[23]='冷漠';
+				data[24]='内心毫无波动，甚至有点想笑'; 
+				data[25]='三分归元气，七分靠运气';
+				data[26]='爱拼才会赢';
+				data[27]='哥竟无言以对···';
+				data[28]='给你一张过去的CD';
+				data[29]='如果哭就一定要哭出来';
+				data[30]='你的好友已下线';
+				data[31]='猪队友';
+				data[32]='实力嘲讽';
+				data[33]='参见包大人！';
+				data[34]='死亡如风，常伴吾身';
+				data[35]='狗粮';
+				data[36]='弹幕护体';
+				data[37]='富强，民主，文明，和谐等社会主义核心价值观';
+				data[38]='梁山108好汉向你发来贺电';
+				data[39]='不存在的';
+				data[40]='111111';
+				data[41]='傻傻傻傻傻傻';
+				data[42]='烦烦烦烦烦烦';
+				data[43]='嘎嘎嘎嘎过';
+				data[44]='菜菜菜菜菜';
+				data[45]='脑洞。。。';
+				data[46]='开心';
+				data[47]='没被发现的话就不算犯罪啊';
+				data[48]='我车上有空调';
+				data[49]='你有快递签收一下';
+				data[50]='查水表';
+				data[51]='我们来谈谈人生';
+				data[52]='朕的大清亡了';
+				data[53]='大结局了';
+				data[54]='就算是神我也杀给你看';
+				data[55]='只要是活着的东西，就是神我也吃给你看';
+				data[56]='万水千山，你愿意陪我一起看吗';
+				data[57]='营养价值是牛肉的六倍';
+				data[58]='用生命向我们总结的经验';
+				data[59]='为了部落';
+				data[60]='黑子';
+				data[61]='气势';
+				data[62]='我也很绝望啊';
+				data[63]='贫乳可是稀缺资源';
+				data[64]='为了自由';
+				data[65]='看我怎么朵蜜你';
+				data[66]='爱衣酱大胜利';
+				data[67]='天道好轮回/苍天饶过谁';
+				data[68]='第二傻缺定律';
+				data[69]='奶妈治疗量差距悬殊';
+				data[70]='XX即是正义';
+				data[71]='不给你们看到我xx的脸';
+				data[72]='家宅平安';
+				data[73]='我能怎么办？';
+				data[74]='承包xx';
+				data[75]='你已经来不及走了';
+				data[76]='瞬间爆炸';	
+				data[77]='鱼，好大的鱼，虎纹鲨鱼';
+				data[78]='天降正义';
+				data[79]='岂不美哉';
+				data[80]='颜值即是正义';
+				data[81]='字幕呢';
+				data[82]='羊踹玉兔，玉兔喊疼';
+				data[83]='自古枪兵多挂b';
+				data[84]='王的奥义';
+				data[85]='见福滚';
+				data[86]='要成为我的master吗';
+				data[87]='退了退了';
+				data[88]='该换台词了';
+				data[89]='只有神知道的世界';
+				data[90]='333333';
+				data[91]='诸君，我喜欢xx';
+				data[92]='真相并非只有一个';
+				data[93]='灵魂歌手';
+				data[94]='要退赶紧退';
+				data[95]='向你抛出了一个bug';
+				data[96]='中二病';
+				data[97]='植物缺少氮磷钾，必须要用金坷垃';
+				data[98]='仰望星空派';
+				data[99]='板蓝根方便面';
+				data[100]='楼上的还好吗';
+				data[101]='开挂了';
+				data[102]='经验+15';
+				data[103]='555555';
+				data[104]='前方高能';	
+				data[105]='四十五度角仰望星空';
+				data[106]='地球太危险了';
+				data[107]='你还差得远呢！';
+				data[108]='今天的风儿好喧嚣啊';
+				data[109]='呃呃呃呃';
+				data[110]='我想回火星';
+				data[111]='画风感人';
+				data[112]='我想学外语';
+				data[113]='火星';
+				data[114]='耶耶耶耶耶耶';
+				data[115]='自古红蓝出cp';
+				data[116]='真相只有一个';
+				data[117]='空降失败';
+				data[118]='今天你吃了吗';
+				data[119]='一本正经胡说八道';
+				data[120]='完结撒花';
+				data[121]='。。。。。';
+				return data;		  
+		  }
+		 
+		  
+		  
+		
+})
+</script>
+
+</body>
+ 
+</html>

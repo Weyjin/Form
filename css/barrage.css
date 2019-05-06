@@ -1,0 +1,13 @@
+.barrage{
+    visibility: hidden;
+    overflow:hidden;
+	position:absolute;
+}
+.barrage span{
+    position:absolute;	
+	white-space:nowrap;
+	z-index:9999;
+	color:#ffffff;
+	visibility: visible;
+	
+}
