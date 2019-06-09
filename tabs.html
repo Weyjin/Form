@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<link href="css/tabs.css" rel="stylesheet"/>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.tabs.js"></script>
+
+<title>tabs</title>
+
+</head>
+ 
+<body>
+<div class="tab" id="tab">
+   <div class="navbar">
+        <div class="navbar__item">推荐</div>
+		<div class="navbar__item">图书</div>
+		<div class="navbar__item">家具</div>
+		<div class="navbar__item">鞋品</div>
+		<div class="navbar__item">饮料</div>
+    </div>
+	<div class="tab__lines">
+	   <div class="tab__line"></div>
+	</div>
+  <div class="tab__panel">
+	  <div class="tab__content">推荐页</div>
+	  <div class="tab__content">图书页</div>
+	  <div class="tab__content">家具页</div>
+	  <div class="tab__content">鞋品页</div>
+	  <div class="tab__content">饮料页</div>
+  </div>
+</div>
+
+
+<script>
+$(function(){
+
+ var options={defaultValue:1,lineColor:'#680aeb',result:function(index){
+    console.log(index);
+ }};
+$("#tab").tabs(options);
+
+
+})
+</script>
+
+</body>
+ 
+</html>

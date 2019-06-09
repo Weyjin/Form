@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>展开</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.expanded.js"></script>
+<link rel="stylesheet" href="css/expanded.css"/>
+
+ </head>
+ <body>
+
+ <div class="example"></div>
+
+<script>
+$(function() {
+    var options = {
+        parentData: ['我的好友', '朋友', '同学', '老师', '联系人'],
+        childrenData: [[{
+            name: '张三',
+            img: 'images/1.jpg',
+            describe: '哈哈...'
+        },
+        {
+            name: '李四',
+            img: 'images/2.jpg',
+            describe: '（0_0）'
+        },
+        {
+            name: '王五',
+            img: 'images/3.jpg',
+            describe: '(-_-)'
+        }], [{
+            name: '赵六',
+            img: 'images/4.jpg',
+            describe: '学到如何通过使用 jQuery 应用 JavaScript 效果'
+        },
+        {
+            name: '吴七',
+            img: 'images/5.jpg',
+            describe: '应该对以下知识有基本的了解'
+        }], [{
+            name: '熊大',
+            img: 'images/6.jpg',
+            describe: '您将找到许多可以在线编辑并测试的 jQuery 实例。'
+        },
+        {
+            name: '熊二',
+            img: 'images/1.jpg',
+            describe: '您将找到包含所有 jQuery 对象和函数的完整参考手册'
+        }], [{
+            name: 'a',
+            img: 'images/2.jpg',
+            describe: '通过一行简单的标记被添加到网页中快速路的房价快速的反馈是否将耳机耳机靠的就是'
+        },
+        {
+            name: 'b',
+            img: 'images/3.jpg',
+            describe: '隐藏了 HTML 文档中所有的元素'
+        },
+        {
+            name: 'c',
+            img: 'images/4.jpg',
+            describe: '一份是精简过的，另一份是未压缩的'
+        }]],
+        expandedAll: false,
+        parentResult: function(index, expanded, value) {
+            if (expanded) {
+                console.log("打开 index:" + index + "--value:" + value);
+            } else {
+                console.log("关闭 index:" + index + "--value:" + value);
+            }
+        },
+        childrenResult: function(pIndex, cIndex, value) {
+            console.log(pIndex + "--" + cIndex + "--" + value.describe);
+        }
+    };
+    $('.example').Expanded(options);
+
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>letter</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.letter.js"></script>
+<script src="js/utils.js"></script>
+
+<link href="css/letter.css" rel="stylesheet"/>
+
+<style>
+   textarea{
+      width:600px;
+	  height:300px;
+      font-size:30px;
+	  outline:none;
+      resize:none;
+	  z-index:1;
+	  line-height:32px;
+
+   }
+   .letter-line{
+     width:600px;
+	 height:2px;
+	 background:#eee;
+	 z-index:999;
+	 left:3px;
+	 position:relative;
+	 visibility:visible;
+   }
+   .letter-lines{
+	  position:absolute;
+	  z-index:0;
+	  visibility:hidden;
+   }
+</style>
+</head>
+ <body>
+<div style="margin:0px 100px;">
+<textarea id="area" spellcheck="false">
+生生世世四十三
+四十三
+生生世世
+四十三
+四十三
+四十三
+四十三
+事实上发达发达
+射射射射射
+是撒点粉士大夫
+家里尅热、
+李峰
+
+</textarea>
+
+</div>
+<script>
+  
+ $(function(){
+     $('#area').letter();
+
+	 var s=new Date().format('yyyy-MM-dd hh:mm:ss');
+	 console.log(s);
+	 var guid=new Guid();
+	 console.log(guid.toString());
+   
+ });
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.rating{
+    background:url(../images/rating.png) no-repeat;
+	background-position: 0px 0px;
+	width:90px;
+	height:20px;
+	position:relative;
+	z-index:1;
+	
+  }
+ 
+  .star{
+    background:url(../images/rating.png) no-repeat;
+	background-position: 0px -20px;
+	width:0px;
+	height:20px;
+	z-index:999;
+	position: absolute;
+  }
+  .rating-text{
+    position:relative;
+	left:95px;
+	top:-5px;
+  }

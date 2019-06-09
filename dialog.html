@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>对话框</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.dialog.js"></script>
+<link href="css/dialog.css" rel="stylesheet"/>
+ </head>
+ <body>
+<button class='button-dialog' onclick="cenal()">确认对话框</button>
+<button class='button-dialog' onclick="ok()">警告框</button>
+
+<!--
+<div class="wrapper-dialog">
+   <div class="dialog">
+       <div class="head-dialog">标题</div>
+	   <div class="content-dialog">
+	      <span>Are you sure you want to eat this ice  cream?</span>
+	   </div>
+	   <div class="buttons-dialog">
+	       <button class="button-dialog">取消</button>
+		   <button class="button-dialog button-ok">确定</button>
+	   </div>
+   </div>
+</div>
+-->
+<script>
+  
+   function cenal(){
+      $.dialog({confirm:true,title:'警告',content:'你确定要删除这个数据吗？',result:function(ok){
+        console.log(ok);
+      }});
+   }
+
+   function ok(){
+      $.dialog({confirm:false,Cancelable:false,result:function(ok){
+        console.log(ok);
+      }});
+   }
+
+</script>
+</body>
+</html>

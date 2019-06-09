@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>星型评价条</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.rating.min.js"></script>
+<link href="css/rating.css" rel="stylesheet"/>
+
+</head>
+ <body>
+<div style="margin:100px 100px;">
+   <span>默认</span>
+   <div id="default"></div>
+   <button class="btn1">获取</button><hr/>
+   <span>设置默认值</span>
+   <div id="rating"></div>
+   <button class="btn2">获取</button><hr/>
+   <span>禁用</span>
+   <div id="rDisable"></div>
+   <button class="btn3">获取</button>
+</div>
+<script>
+  
+ $(function(){
+
+   
+    var v1=$('#default').rating({});
+    $('.btn1').click(function(){
+		var s=v1.getLeavl();
+	     alert(s);
+	});
+
+    var options={defaultLeavl:7};
+    var v2=$('#rating').rating(options);
+    $('.btn2').click(function(){
+		var s=v2.getLeavl();
+	     alert(s);
+	});
+
+    var options2={defaultLeavl:5,disable:true};
+    var v3=$('#rDisable').rating(options2);
+    $('.btn3').click(function(){
+		var s=v3.getLeavl();
+	     alert(s);
+	});
+
+	
+ })
+
+</script>
+</body>
+</html>
